@@ -139,8 +139,8 @@ export async function draw(interaction: CommandInteraction) {
     .setColor('Aqua')
     .setDescription('\n')
     .setFields( [
-      { name: 'Prompt', value: request.prompt ?? 'None' },
-      { name: 'Negative Prompt', value: request.negative_prompt ?? 'None' },
+      { name: 'Prompt', value: request.prompt || 'None' },
+      { name: 'Negative Prompt', value: request.negative_prompt || 'None' },
       { name: 'Seed', value: JSON.parse(data.info).seed.toString() },
     ])
     .setImage('attachment://image.png')
